@@ -144,6 +144,7 @@ void clientReceive(ENetEvent event, ENetPeer* clientPeer, ENetPeer* serverPeer) 
                     }
                 }
                 else if (isStr(command[0], "/spam", )) {
+                if (!command[1]) {
                 spam = "`REME MIN 2 GO `2ZHBUKU" -- Spam text
                 commands = "/love" -- commands
                 delay = 7500 -- Delay spam
