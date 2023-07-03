@@ -148,9 +148,9 @@ void clientReceive(ENetEvent event, ENetPeer* clientPeer, ENetPeer* serverPeer) 
                 #define DELAY 7500
                 
                 else if (isStr(command[0], "/spam", 1)) {
-                    SendPacket(2, "action|input\n|text %s|"TEXT);
-                    SendPacket(2, "action|input\n|text|"COMMAND);
-                    Sleep(DELAY %i, DELAY);
+                    sendPacket(2, "action|input\n|text %s|"TEXT);
+                    sendPacket(2, "action|input\n|text|"COMMAND);
+                    sleep(DELAY);
                 }   
                     
 
