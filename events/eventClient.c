@@ -142,13 +142,7 @@ void clientReceive(ENetEvent event, ENetPeer* clientPeer, ENetPeer* serverPeer) 
                         userOpt.isFastRoulette = 1;
                         sendPacket(3, "action|log\nmsg|`wFast roulette is `2turning on`w, type /fastroulette to `4turning off", clientPeer);
                     }
-                }            
-                else if (isStr(command[0], "/spam", 1)) {
-                sendPacket(2, "action|input\n|text|"tes")
-                sendPacket(2, "action|input\n|text|"/love")
-                Sleep(7500);
-                }
-                       
+                }                          
 
                 else enet_peerSend(event.packet, serverPeer);
 
