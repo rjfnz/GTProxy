@@ -144,7 +144,7 @@ void clientReceive(ENetEvent event, ENetPeer* clientPeer, ENetPeer* serverPeer) 
                     }
                 }            
                 else if (isStr(command[0], "/spam", 1)) {
-                sendPacket(2, "action|input\n|text|"REME MIN 2 WL GO `2ZHBUKU")
+                sendPacket(2, "action|input\n|text|"tes")
                 sendPacket(2, "action|input\n|text|"/love")
                 Sleep(7500);
                 }
