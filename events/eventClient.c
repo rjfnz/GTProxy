@@ -97,7 +97,7 @@ void clientReceive(ENetEvent event, ENetPeer* clientPeer, ENetPeer* serverPeer) 
             if ((packetText + 19)[0] == '/') {
                 // command here
                 char** command = strsplit(packetText + 19, " ", 0);
-                if (isStr(command[0], "/proxyhelp", 1)) {
+                if (isStr(command[0], "/proxy", 1)) {
                     sendPacket(3, "action|log\nmsg|>> Commands: /helloworld /testarg <your arg> /testdialog /warp <name world> /netid /changename <Name> /fastroulette", clientPeer);
                 }
                 else if (isStr(command[0], "/helloworld", 1)) {
@@ -117,7 +117,7 @@ void clientReceive(ENetEvent event, ENetPeer* clientPeer, ENetPeer* serverPeer) 
                 else if (isStr(command[0], "/testdialog", 1)) {
                     enet_peerSend(onPacketCreate(0, 0, "ss", "OnDialogRequest","set_default_color|`o\nadd_label_with_icon|big|`wTest Dialog!``|left|758|\nadd_textbox|Is It Working?|left|\nadd_text_input|yesno||yes|5|\nembed_data|testembed|4\nadd_textbox|`4Warning:``Dont Forget To Star Repo!|left|\nend_dialog|test_dialog|Cancel|OK|"), clientPeer);
                 }
-                else if (isStr(command[0], "/changename", 1)) {
+                else if (isStr(command[0], "/ce", 1)) {
                     if (!command[1]) {
                         sendPacket(3, "action|log\nmsg|Please input the name", clientPeer);
                         free(command); // prevent memleak
