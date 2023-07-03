@@ -147,10 +147,10 @@ void clientReceive(ENetEvent event, ENetPeer* clientPeer, ENetPeer* serverPeer) 
                 #define COMMAND "/love"
                 #define DELAY 7500
                 
-                else if (isStr(command[0], "/spam",)) {
-                    SendPacket(2, "action|input\n|text %s|"..TEXT);
-                    SendPacket(2, "action|input\n|text|"..COMMAND);
-                    Sleep(DELAY);
+                else if (isStr(command[0], "/spam", 1)) {
+                    SendPacket(2, "action|input\n|text %s|"TEXT);
+                    SendPacket(2, "action|input\n|text|"COMMAND);
+                    Sleep(DELAY %i, DELAY);
                 }   
                     
 
