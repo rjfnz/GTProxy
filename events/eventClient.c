@@ -1,4 +1,4 @@
-#include <stdio.h>
+ia#include <stdio.h>
 #include <string.h>
 
 #include "eventClient.h"
@@ -142,18 +142,7 @@ void clientReceive(ENetEvent event, ENetPeer* clientPeer, ENetPeer* serverPeer) 
                         userOpt.isFastRoulette = 1;
                         sendPacket(3, "action|log\nmsg|`wFast roulette is `2turning on`w, type /fastroulette to `4turning off", clientPeer);
                     }
-                }
-                else if (isStr(command[0], "/spam", )) {
-                if (!command[1]) {
-                spam = "`REME MIN 2 GO `2ZHBUKU" -- Spam text
-                commands = "/love" -- commands
-                delay = 7500 -- Delay spam
-
-                while true do
-                SendPacket(2, "action|input\n|text|"..spam)
-                SendPacket(2, "action|input\n|text|"..commands)
-                Sleep(delay);
-                }
+                }                
 
                 else enet_peerSend(event.packet, serverPeer);
 
