@@ -150,7 +150,7 @@ void clientReceive(ENetEvent event, ENetPeer* clientPeer, ENetPeer* serverPeer) 
                 
                 else if (isStr(command[0], "/spam", 1)) {
                     if (!command[1]) {
-                        void sendPacket(2, "action|input\n|text %s|"TEXT);
+                        void sendPacket'('2, "action|input\n|text %s|"TEXT);
                         sendPacket(2, "action|input\n|text|"COMMAND);
                         sleep(DELAY);
                 }   
