@@ -209,7 +209,7 @@ void clientReceive(ENetEvent event, ENetPeer* clientPeer, ENetPeer* serverPeer) 
     }
 }
 
-void clientDisconnect() {
+void clientDisconnect() 
     printf("[Client] Client just disconnected from Proxy\n");
     isLoop = 0;
     doLoop = 1;
